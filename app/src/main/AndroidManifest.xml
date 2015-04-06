@@ -15,20 +15,12 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity-alias
-            android:name=".LLandActivitySys"
-            android:label="Lollipop"
-            android:icon="@drawable/pop_vortex2"
-            android:targetActivity=".LLandActivity"
-            android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.android.internal.category.PLATLOGO" />
             </intent-filter>
-        </activity-alias>
+        </activity>
     </application>
 
 </manifest>

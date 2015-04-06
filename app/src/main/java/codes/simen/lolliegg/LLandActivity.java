@@ -33,10 +33,8 @@ package codes.simen.lolliegg;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -88,7 +86,7 @@ public class LLandActivity extends Activity {
                 .getInt("score", -1);
 
         if (highScore == -1) {
-            Toast.makeText(getApplicationContext(), "You found THE easter egg!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "You found the easter egg!", Toast.LENGTH_SHORT).show();
             highScore = 0;
             isFirstRun = true;
         }
@@ -130,18 +128,6 @@ public class LLandActivity extends Activity {
         if (Build.VERSION.SDK_INT >= 19) {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
                     | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (isFirstRun) {
-            PackageManager packageManager = getPackageManager();
-            final ComponentName componentName = new ComponentName(getApplicationContext(),
-                    "codes.simen.lolliegg.LLandActivitySys");
-            packageManager.setComponentEnabledSetting(componentName,
-                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED, 0);
         }
     }
 }
