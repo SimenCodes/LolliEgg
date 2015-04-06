@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="codes.simen.lolliegg" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pop_vortex2"
+        android:label="Lollipop"
+        android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+        <activity
+            android:name=".LLandActivity"
+            android:icon="@drawable/pop_vortex2"
+            android:label="Lollipop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".LLandActivitySys"
+            android:label="Lollipop"
+            android:icon="@drawable/pop_vortex2"
+            android:targetActivity=".LLandActivity"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.android.internal.category.PLATLOGO" />
+            </intent-filter>
+        </activity-alias>
+    </application>
+
+</manifest>
